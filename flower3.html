@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Flower</title>
+    <style>
+        html, body{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(7,36,12);
+            overflow: hidden;
+            background-size: cover;
+        }
+        #demo,.carousel-inner{
+            width: 100%;
+            /* margin-top: 35px; */
+            /* height: calc(100% - 40px); */
+            height: 100%;
+        }
+        .img-item{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-item{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .mask{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* background-color: rgba(0,0,0,0.3); */
+        }
+        .carousel-control-next, .carousel-control-prev{
+            width: 40px;
+        }
+        .carousel-indicators li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        p{
+            font-size: 24px;
+            padding: 20px;
+            color: #fff;
+        }
+        nav{
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            z-index: 99;
+        }
+        nav img{
+            width: 35px;
+            height: 35px;
+        }
+        .font{
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        .font a{
+            color: #fff;
+            font-size: 16px;
+        }
+        .imgButton{
+            position: absolute;
+            bottom: 15px;
+            right: 40px;
+            width: 30px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <link rel="stylesheet" href="./common.css">
+</head>
+<body>
+    <nav>
+        <a href="./nav.html"><img src="./img/icon_lotus.png" alt=""></a>
+        <div class="font">
+            <a href="./nav.html" style="font-weight: bold;">The Strange Tales of Liao Zhai</a>
+            <a href="./nav.html">The first story: Flower fairies</a>
+        </div>
+    </nav>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+ 
+        <!-- 指示符 -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+       
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="img-item">
+                <img class="img" src="./img/chry1s.jpg">   
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="img-item">
+                <img class="img" src="./img/chry2.jpg">  
+                
+            </div><div class="imgButton">
+                    
+                    <div class="fontBtm"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="img-item">
+                <img class="img" src="./img/chry3.jpg" />
+            </div>
+          </div>
+        </div>
+       
+        <!-- 左右切换按钮 -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+       
+      </div>
+</body>
+<script>
+    $('.carousel').carousel({
+        interval: false
+    })
+</script>
+</html>
+
+
+
+
+
+<!--        <p>Mr. Zong Xiangruo of Shukuan loves lotus, and is overwhelmed by the lotus
+                        lady. In the night of the bridal chamber, he was wrong to sleep with a fox girl
+                        who had become a girl. Monk You Fang sucked the fox spirit into the altar
+                        with a charm, and Zong Xiangruo released him from the beginning of love.
+                        The fox girl instructed Zong Xiangruo to find the lady of the lotus. Feeling
+                        attached, Zong Xiangruo rushed to Youfang Monk Shangdong Temple with
+                        the third lady of lotus to guarantee the fox girl and rescue the alien. Weird!
+                        Humans, beasts, and immortals can also live together well.</p>  
+                    
+                    
+                    
+                    
+            <p>Luoyang scholars often often used peony obsessively. He once searched for
+                        precious peonies in Caozhou, and formed a marriage with the peony fairy
+                        named GeJin. After a few years of marriage, the life is beautiful, and he also
+                        gave birth to a son. Once he saw that there was a poem titled "Presenting
+                        Mrs. Cao Guo" on the wall, and he realized that Mrs. Cao Guo was a peony
+                        with the same eaves. After Ge Jin knew this, She threw the child to the
+                        ground and disappeared by herself. A few days later, there were two peony
+                        plants growing at the place where the child was born.The flowers were one
+                        purple and the other white, and the flowers were as big as a plate.</p>        
+                    
+                    
+                    
+            <p>The scholar surnamed Huang was studying near the Taiqing Palace. White
+                        Peony felt his affection turned into a fragrant jade to marry him. Later, the
+                        white peony was stolen and the fragrant jade was also missing. The scholar
+                        cried all day long, and met the red dress made of camellia during his
+                        mourning. Female Jiangxue cried and hung Xiangyu together with her, the
+                        flower god was finally moved and brought Xiangyu back to life. After Huang
+                        Sheng died, he became a red bud under the peony, and was chopped off by
+                        the little Taoist priest inadvertently. White peony and camellia also died one
+                        after another.</p>        
+                    
+                    
+                    -->
