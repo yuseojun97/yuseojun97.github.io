@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/selectPage_bg.jpg');
+            background-size: cover;
+        }
+        .flex{
+            width: 100%;
+            display: flex;
+        }
+        .nav{
+            box-sizing: border-box;
+            padding: 20px 40px;
+            justify-content: space-between;
+        }
+        .sec{
+            justify-content: space-around;
+            align-items: center;
+            height: 110%;
+            position: absolute;
+            top: 0;
+        }
+        a{
+            color: gray;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        h1{
+            color: gray;
+            font-size: 16px;
+            margin-bottom: 13px;
+        }
+        .sec div img{
+            width: 100%;
+        }
+        .sec div{
+            width: 20%;
+            
+        }
+        .sec .gif{
+            width: 40%;
+            position: absolute;
+            bottom: 10px;
+            display: none;
+        }
+        .left{
+            position: relative;
+            z-index: 11;
+        }
+        .right{
+            position: relative;
+            z-index: 11;
+        }
+
+
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="flex nav">
+        <div class="left ">
+            <h1>The strange Tales of Liao Zhao</h1>
+            <p><a href="about.html">About</a></p>
+            <p><a href="https://docs.google.com/document/d/1_lGUw9U19vq1PbrqDuIjbOpAFHPikQ4LWr18SDfZ5fE/edit?usp=sharing" target="_blank">Guest Book</a></p>
+        </div>
+        <div class="right">
+            <h1><a href="./index.html">Flower Fairy</a></h1>
+        </div>
+    </nav>
+    <section class="flex sec">
+        <div><a href="./flower1.html"><img src="./img/flower_icon1.png" alt=""></a></div>
+        <div><a href="./flower2.html"><img src="./img/flower_icon2.png" alt=""></a></div>
+        <div><a href="./flower3.html"><img src="./img/flower_icon3.png" alt=""></a></div>
+        <img class="gif" id="gifImg" src="./img/cry_3.gif" alt="">
+    </section>
+</body>
+<script>
+    const imgs = ["./img/peony1.gif", "./img/lotus2.gif", './img/cry_3.gif']
+    $('.sec div img').mouseover((event)=>{ 
+        event.stopPropagation()
+        $('.sec div img').css({
+            display: 'none'
+        })
+        event.target.style.display = 'block'
+        const index = $('.sec div img').index(event.target)
+        const right = index > 1 ? '60%' : '0'
+        $('.sec .gif').css({
+            display: 'block',
+            right: right
+        })
+        gifImg.src = imgs[index]
+    })
+    $('.sec div img').mouseout((event)=>{ 
+        event.stopPropagation()
+        $('.sec div img').css({
+            display: 'block'
+        })
+        $('.sec .gif').css({
+            display: 'none',
+        })
+    }) ;
+</script>
+</html>
